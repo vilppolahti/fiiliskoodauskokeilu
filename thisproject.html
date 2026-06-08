@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiiliskoodauskokeilu - Simple Game Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #3498db;
+            margin-top: 30px;
+        }
+        .game-card {
+            background: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .game-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .game-card p {
+            margin-bottom: 0;
+        }
+        .code-snippet {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+        .github-link {
+            text-align: center;
+            margin: 30px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        .features {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .features li {
+            padding: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fiiliskoodauskokeilu</h1>
+        <p>A collection of simple, well-commented games created as a coding experiment. Each game demonstrates fundamental programming concepts while being fully functional and playable.</p>
+        
+        <h2>Available Games</h2>
+        
+        <div class="game-card">
+            <h3>Snake Game</h3>
+            <p>Classic snake game where you control a growing snake to eat food and avoid collisions.</p>
+            <ul class="features">
+                <li>Arrow key controls for smooth movement</li>
+                <li>Score tracking system</li>
+                <li>Screen wrapping for continuous gameplay</li>
+                <li>Self-collision detection</li>
+            </ul>
+            <p><strong>File:</strong> <code>snake.py</code></p>
+            <p><strong>To run:</strong> <code>python snake.py</code> (requires pygame)</p>
+        </div>
+        
+        <div class="game-card">
+            <h3>Tetris Game</h3>
+            <p>Traditional tetris with all 7 standard tetromino pieces, rotation, and line clearing.</p>
+            <ul class="features">
+                <li>All 7 standard tetromino shapes (I, O, T, L, J, S, Z)</li>
+                <li>Piece rotation and movement</li>
+                <li>Line clearing with scoring</li>
+                <li>Game over detection</li>
+                <li>Hard drop functionality</li>
+            </ul>
+            <p><strong>File:</strong> <code>tetris.py</code></p>
+            <p><strong>To run:</strong> <code>python tetris.py</code> (requires pygame)</p>
+        </div>
+        
+        <div class="game-card">
+            <h3>Chess Game</h3>
+            <p>Complete chess implementation with all standard rules, including check and checkmate detection.</p>
+            <ul class="features">
+                <li>All 6 piece types with proper movement rules</li>
+                <li>Check and checkmate detection</li>
+                <li>Turn-based gameplay</li>
+                <li>Standard algebraic notation input</li>
+                <li>Text-based interface for simplicity</li>
+            </ul>
+            <p><strong>File:</strong> <code>chess.py</code></p>
+            <p><strong>To run:</strong> <code>python chess.py</code></p>
+        </div>
+        
+        <h2>Code Quality</h2>
+        <p>Each game is written with a focus on:</p>
+        <ul class="features">
+            <li>Clean, readable code structure</li>
+            <li>Comprehensive comments explaining the why behind design decisions</li>
+            <li>Proper encapsulation and separation of concerns</li>
+            <li>Follows Python best practices</li>
+            <li>Minimal dependencies (only pygame for graphical games)</li>
+        </ul>
+        
+        <h2>Sample Code</h2>
+        <p>Here is a taste of the commenting style used throughout the projects:</p>
+        <div class="code-snippet">
+# Why pygame? It provides the necessary primitives for 2D games
+# (rendering, input, timing) without excessive complexity
+
+# Why a class-based structure? Encapsulation keeps game state and
+# logic organized, making it easier to extend and maintain
+
+class Snake:
+    # Why start with 3 segments? A single segment snake would be
+    # invisible until it moves, 3 provides immediate visual feedback
+    def __init__(self):
+        self.positions = [(100, 100), (80, 100), (60, 100)]
+        self.direction = (20, 0)
+        ...
+        </div>
+        
+        <div class="github-link">
+            <a href="https://github.com/vilppolahti/fiiliskoodauskokeilu" class="btn">View on GitHub</a>
+            <a href="https://github.com/vilppolahti/fiiliskoodauskokeilu/archive/refs/heads/main.zip" class="btn">Download ZIP</a>
+        </div>
+        
+        <h2>How to Use</h2>
+        <ol>
+            <li>Clone the repository or download the files</li>
+            <li>Ensure you have Python installed (Python 3.6+ recommended)</li>
+            <li>For graphical games (Snake, Tetris), install pygame: <code>pip install pygame</code></li>
+            <li>Run any game file: <code>python snake.py</code>, <code>python tetris.py</code>, or <code>python chess.py</code></li>
+            <li>Read the comments in each file to understand the design decisions</li>
+        </ol>
+        
+        <footer>
+            <p>Created by Pessi Vilppolahti | Coding Experiment | June 2026</p>
+            <p>All code is provided as-is for educational and experimental purposes.</p>
+        </footer>
+    </div>
+</body>
+</html>
